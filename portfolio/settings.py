@@ -11,8 +11,7 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+    # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -79,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'portfoliodb',
-        'USER': 'djangodbman',
+        'USER': 'postgres',
         'PASSWORD': 'Aa6942862699',
         'HOST': 'localhost',
         'PORT': "5432",
@@ -135,6 +134,6 @@ MEDIA_ROOT= os.path.join(BASE_DIR, 'media/')
 MEDIA_URL= '/media/'
 
 try:
-    from local_settings import *
-except ImportError:
+    from .local_settings import *
+    except ImportError:
     pass
